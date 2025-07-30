@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fa;
+  color: #2c3e50;
+}
+header {
+  background: #1e3d59;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+nav {
+  background: #27496d;
+  padding: 12px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+main.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.member {
+  background-color: #eaf0f2;
+  border-radius: 6px;
+  padding: 15px;
+  flex: 1;
+  min-width: 250px;
+}
+.full-img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.half-img {
+  width: 48%;
+  margin: 0%;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.team-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.team-row .member {
+  flex: 1 1 320px;
+}
+
+.team-row img.half-img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(60,80,120,0.10);
+  margin: 0 10px;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-row .member,
+  .team-row img.half-img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+footer {
+  background: #1e3d59;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Tables */
+.financial-table, .timeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.financial-table th, .financial-table td,
+.timeline-table th, .timeline-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+.financial-table thead {
+  background-color: #1e3d59;
+  color: white;
+}
+.timeline-table th {
+  background-color: #27496d;
+  color: white;
+}
+.highlight td {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Section Spacing */
+main.container h2 {
+  margin-top: 40px;
+  color: #1e3d59;
+}
+
+/* Image Spacing */
+img.half-img {
+  margin-bottom: 20px;
+}
+
+/* List Styling */
+main.container ul {
+  margin: 10px 0 20px 20px;
+  line-height: 1.6;
+}
+.site-location {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin: 22px 0 0 0;
+}
+.map-container iframe {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.site-address {
+  min-width: 210px;
+  font-size: 1.05em;
+  color: #222;
+  line-height: 1.7;
+}
+.site-address strong {
+  font-size: 1.12em;
+}
+.site-address a {
+  color: #27496d;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .site-location {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .map-container iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+  }
+  .site-address {
+    margin-top: 18px;
+  }
+}
+
+
+
+/* Table Styling for Substructure and Superstructure */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures grid lines are continuous */
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd; /* Light grey border for grid */
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #1e3d59;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternating row colors */
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Add space between table and surrounding content */
+table + p {
+  margin-top: 20px;
+}
+
+/* Ensure the grid lines are clear */
+table {
+  border: 2px solid #333;
+}
+
+
+li a, .dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #111;
+}
+
+li.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
